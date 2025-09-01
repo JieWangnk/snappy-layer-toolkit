@@ -1,0 +1,170 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox          |
+|  \    /   O peration     | Version:  v2012                                |
+|   \  /    A nd           | Web:      www.OpenFOAM.com                     |
+|    \/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class dictionary;
+    object snappyHexMeshDict;
+}
+
+castellatedMesh true;
+snap true;
+addLayers false;
+
+castellatedMeshControls
+{
+    maxLocalCells 1000000;
+    maxGlobalCells 50000000;
+    minRefinementCells 10;
+    nCellsBetweenLevels 3;
+    resolveFeatureAngle 30.0;
+    features
+    (
+        {
+            file "wall_aorta.eMesh";
+            level 0;
+        }
+        {
+            file "inlet.eMesh";
+            level 0;
+        }
+        {
+            file "outlet1.eMesh";
+            level 0;
+        }
+        {
+            file "outlet2.eMesh";
+            level 0;
+        }
+        {
+            file "outlet3.eMesh";
+            level 0;
+        }
+        {
+            file "outlet4.eMesh";
+            level 0;
+        }
+        {
+            file "outlet5.eMesh";
+            level 0;
+        }
+    );
+    refinementSurfaces
+    {
+        wall_aorta
+        {
+            level (1 1);
+        }
+        inlet
+        {
+            level (1 1);
+        }
+        outlet1
+        {
+            level (1 1);
+        }
+        outlet2
+        {
+            level (1 1);
+        }
+        outlet3
+        {
+            level (1 1);
+        }
+        outlet4
+        {
+            level (1 1);
+        }
+        outlet5
+        {
+            level (1 1);
+        }
+    }
+    refinementRegions
+    {
+    }
+    insidePoint (2.912307849031565 -0.26681094069195277 6.061470598615477);
+    allowFreeStandingZoneFaces true;
+}
+
+geometry
+{
+    wall_aorta
+    {
+        type triSurfaceMesh;
+        file "wall_aorta.stl";
+    }
+    inlet
+    {
+        type triSurfaceMesh;
+        file "inlet.stl";
+    }
+    outlet1
+    {
+        type triSurfaceMesh;
+        file "outlet1.stl";
+    }
+    outlet2
+    {
+        type triSurfaceMesh;
+        file "outlet2.stl";
+    }
+    outlet3
+    {
+        type triSurfaceMesh;
+        file "outlet3.stl";
+    }
+    outlet4
+    {
+        type triSurfaceMesh;
+        file "outlet4.stl";
+    }
+    outlet5
+    {
+        type triSurfaceMesh;
+        file "outlet5.stl";
+    }
+}
+snapControls
+{
+    nSmoothPatch 3;
+    tolerance 2.0;
+    nSolveIter 30;
+    nRelaxIter 5;
+    nFeatureSnapIter 15;
+    implicitFeatureSnap true;
+    explicitFeatureSnap false;
+    multiRegionSnap false;
+}
+
+meshQualityControls
+{
+    maxNonOrtho 75;
+    maxBoundarySkewness 25.0;
+    maxInternalSkewness 5.0;
+    maxConcave 85;
+    minVol 1e-15;
+    minTetQuality 1e-12;
+    minArea -1;
+    minTwist 0.01;
+    minTriangleTwist -1;
+    minFaceWeight 0.01;
+    minVolRatio 0.005;
+    minDeterminant 0.0005;
+    nSmoothScale 6;
+    errorReduction 0.5;
+    relaxed
+    {
+        maxNonOrtho 85;
+        maxBoundarySkewness 35;
+        maxInternalSkewness 8;
+    }
+}
+
+mergeTolerance 1e-6;

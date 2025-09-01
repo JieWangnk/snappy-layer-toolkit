@@ -1,0 +1,32 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox          |
+|  \    /   O peration     | Version:  12                                   |
+|   \  /    A nd           | Web:      https://openfoam.org                 |
+|    \/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      surfaceFeaturesDict;
+}
+
+surfaceFeatureExtractDict
+{
+    surfaces
+    (
+        "inlet.stl"
+        "outlet1.stl"
+        "outlet2.stl"
+        "outlet3.stl"
+        "outlet4.stl"
+        "outlet5.stl"
+        "wall_aorta.stl"
+    );
+    includedAngle 160;
+    // You can specify extraction rules here.  By default the
+    // `surfaceFeatures` command will use the values given in
+    // `snappyHexMeshDict` (includedAngle and resolveFeatureAngle).
+}

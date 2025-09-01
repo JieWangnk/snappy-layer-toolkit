@@ -1,0 +1,22 @@
+# Generated mesh files
+constant/polyMesh/
+constant/polyMesh_copy/
+constant/extendedFeatureEdgeMesh/
+
+# OpenFOAM logs  
+log.*
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Results
+layer_results_*.csv
+
+# Cache contents (keep directory)
+.snappymesh_cache/*.json
+
+# OS files
+.DS_Store
+*.swp
