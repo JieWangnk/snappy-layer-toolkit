@@ -40,7 +40,7 @@ python auto_layers.py --T-rel 0.35 --n-layers 5
 
 *Based on systematic testing with complex vascular geometry*
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 ```bash
@@ -70,7 +70,7 @@ python auto_layers.py --T-rel 0.30 --n-layers 5 --quick
 python scripts/generate_dicts.py --T-rel 0.35 --n-layers 5
 ```
 
-## 🔧 How It Works
+##  How It Works
 
 1. **Auto-Detection**: Scans `constant/geometry/` for STL files
 2. **Ray-Casting**: Computes interior point automatically  
@@ -120,7 +120,7 @@ python auto_layers.py --T-rel 0.30 --n-layers 5 --levels 2 3
 python auto_layers.py --T-rel 0.20 --n-layers 10 --levels 2 3
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 **Auto-detection fails?**
 ```bash
@@ -150,7 +150,7 @@ MIT License - See [LICENSE](LICENSE)
   title={snappyHexMesh Boundary Layer Toolkit},
   author={Jie Wang}, 
   year={2025},
-  url={https://github.com/yourusername/snappy-layer-toolkit}
+  url={https://github.com/JieWangnk/snappy-layer-toolkit}
 }
 ```
 
