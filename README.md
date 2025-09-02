@@ -5,7 +5,7 @@ Automated boundary layer meshing for OpenFOAM with 90% fewer parameters needed.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenFOAM](https://img.shields.io/badge/OpenFOAM-12-blue.svg)](https://openfoam.org/)
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Place your STL files in constant/geometry/
@@ -23,14 +23,14 @@ python auto_layers.py --T-rel 0.35 --n-layers 5
 - ✅ Base cell size from blockMeshDict  
 - ✅ Outlet patches automatically
 
-## ✨ Key Benefits
+##  Key Benefits
 
 - **90% Parameter Reduction**: From 10+ parameters to just 2
 - **Auto-Detection**: No manual patch names or interior points
 - **Validated Results**: 87-95% layer coverage consistently
 - **Quick Iteration**: Reuse surface mesh for fast tuning
 
-## 📊 Validated Parameter Ranges
+##  Validated Parameter Ranges
 
 | Layers | Best T_rel | Expected Coverage |
 |--------|------------|-------------------|
@@ -92,7 +92,7 @@ your-case/
 └── # Run toolkit here
 ```
 
-## 🛠️ Components
+## Components
 
 - `auto_layers.py` - Main automation script
 - `scripts/generate_dicts.py` - Dictionary generator with auto-detection
@@ -100,7 +100,7 @@ your-case/
 - `scripts/metrics_logger.py` - Coverage analyzer
 - `system/` - OpenFOAM template files
 
-## 🎯 Examples
+## Examples
 
 ### For New Users
 ```bash
@@ -134,16 +134,13 @@ python auto_layers.py --T-rel 0.35 --n-layers 5 \
 - Use fewer layers with higher T_rel
 - Increase surface refinement levels
 
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE)
 
 ## 🙏 Acknowledgments
 
 - Validation geometry: [Vascular Model Repository](https://www.vascularmodel.com/)
 - Built for the [OpenFOAM](https://openfoam.org/) community
 
-## 📈 Citation
+## Citation
 
 ```bibtex
 @software{snappy_layer_toolkit_2025,
@@ -155,4 +152,4 @@ MIT License - See [LICENSE](LICENSE)
 ```
 
 ---
-**Transform your boundary layer meshing from hours to minutes!** 🚀
+**Transform your boundary layer meshing from hours to minutes!** 
